@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Racine ConstraintLayout pour l'ecran de securite UX. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/securityRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="20dp"
+    tools:context=".SecurityDemoActivity">
+
+    <!-- ScrollView pour afficher toute la demonstration sur petits ecrans. -->
+    <ScrollView
+        android:id="@+id/securityScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Conteneur vertical principal. -->
+        <LinearLayout
+            android:id="@+id/securityContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Titre de l'ecran de securite. -->
+            <TextView
+                android:id="@+id/txtSecurityTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Démonstration de Sécurité UX"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Statut de la protection FLAG_SECURE. -->
+            <TextView
+                android:id="@+id/txtSecurityStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="16sp"
+                tools:text="FLAG_SECURE actif" />
+
+            <!-- Switch pour montrer l'activation et la desactivation de FLAG_SECURE. -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchFlagSecure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:contentDescription="Activer la protection contre les captures d'écran"
+                android:text="Activer FLAG_SECURE"
+                android:textColor="@color/textColorPrimary" />
+
+            <!-- Titre de la section TapJacking. -->
+            <TextView
+                android:id="@+id/txtTapjackingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Protection contre TapJacking"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- Bouton pour verifier la permission overlay. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCheckOverlay"
+                style="@style/Widget.SecureUIApp.MaterialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Vérifier les permissions d'overlay" />
+
+            <!-- Bouton pour ouvrir les parametres overlay Android. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOpenOverlaySettings"
+                style="@style/Widget.SecureUIApp.MaterialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ouvrir les paramètres d'overlay" />
+
+            <!-- Titre de la section TalkBack. -->
+            <TextView
+                android:id="@+id/txtTalkbackTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Protection contre TalkBack"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- Donnees sensibles non lues par TalkBack grace a importantForAccessibility. -->
+            <TextView
+                android:id="@+id/txtSensitiveData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/cardBackground"
+                android:focusable="true"
+                android:importantForAccessibility="no"
+                android:padding="14dp"
+                android:text="Données sensibles: 1234-5678-9012-3456"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp" />
+
+            <!-- Bouton pour simuler le focus sur les donnees sensibles. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSimulateTalkback"
+                style="@style/Widget.SecureUIApp.MaterialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Simuler le focus TalkBack" />
+
+            <!-- Bouton retour pour fermer l'ecran de securite. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackSecurity"
+                style="@style/Widget.SecureUIApp.MaterialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Retour" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

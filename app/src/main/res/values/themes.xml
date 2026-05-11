@@ -1,0 +1,52 @@
+<resources>
+    <!-- Theme principal MaterialComponents avec support automatique clair/sombre. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Couleur principale de l'application. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- Couleur foncee utilisee par certains elements systeme. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!-- Couleur d'accent pour les actions secondaires. -->
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Couleur du fond de toutes les fenetres. -->
+        <item name="android:windowBackground">@color/backgroundColor</item>
+
+        <!-- Couleur principale du texte Android. -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+
+        <!-- Couleur secondaire du texte Android. -->
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+
+        <!-- Style commun applique aux boutons Material. -->
+        <item name="materialButtonStyle">@style/Widget.SecureUIApp.MaterialButton</item>
+
+        <!-- Style commun applique aux champs TextInputLayout. -->
+        <item name="textInputStyle">@style/Widget.SecureUIApp.TextInputLayout</item>
+    </style>
+
+    <!-- Ancien nom conserve pour rester compatible avec les fichiers existants. -->
+    <style name="Theme.SecureUIApp" parent="AppTheme" />
+
+    <!-- Style simple pour les boutons avec coins legerement arrondis. -->
+    <style name="Widget.SecureUIApp.MaterialButton" parent="Widget.MaterialComponents.Button">
+        <!-- Rayon faible pour un rendu propre et professionnel. -->
+        <item name="cornerRadius">8dp</item>
+
+        <!-- Couleur de fond du bouton. -->
+        <item name="backgroundTint">@color/colorPrimary</item>
+
+        <!-- Couleur du texte du bouton. -->
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Style des champs avec contour pour bien voir les zones de saisie. -->
+    <style name="Widget.SecureUIApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Couleur du contour quand le champ est selectionne. -->
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+
+        <!-- Couleur du libelle du champ. -->
+        <item name="hintTextColor">@color/colorPrimary</item>
+    </style>
+</resources>

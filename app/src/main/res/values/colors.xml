@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Couleur principale utilisee pour les boutons et les champs importants en mode clair. -->
+    <color name="colorPrimary">#1565C0</color>
+
+    <!-- Couleur principale plus foncee pour les elements d'etat en mode clair. -->
+    <color name="colorPrimaryDark">#0D47A1</color>
+
+    <!-- Couleur d'accent pour attirer l'attention sur une action secondaire. -->
+    <color name="colorAccent">#00897B</color>
+
+    <!-- Couleur principale du texte pour garder une bonne lisibilite. -->
+    <color name="textColorPrimary">#1F2933</color>
+
+    <!-- Couleur secondaire du texte pour les informations moins importantes. -->
+    <color name="textColorSecondary">#52616B</color>
+
+    <!-- Couleur de fond claire pour l'ecran de l'application. -->
+    <color name="backgroundColor">#F5F7FA</color>
+
+    <!-- Couleur des cartes en mode clair. -->
+    <color name="cardBackground">#FFFFFF</color>
+
+    <!-- Couleur noire gardee pour les ressources Android de base. -->
+    <color name="black">#FF000000</color>
+
+    <!-- Couleur blanche gardee pour les ressources Android de base. -->
+    <color name="white">#FFFFFFFF</color>
+</resources>

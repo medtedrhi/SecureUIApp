@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Racine ConstraintLayout pour l'ecran de test des themes. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/themeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="20dp"
+    tools:context=".ThemeTestActivity">
+
+    <!-- Conteneur vertical pour les elements de demonstration. -->
+    <LinearLayout
+        android:id="@+id/themeContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Titre de l'ecran. -->
+        <TextView
+            android:id="@+id/txtThemeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test des Thèmes"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Switch Material avec libelle clair pour TalkBack. -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:contentDescription="Activer ou désactiver le mode sombre"
+            android:text="Mode sombre"
+            android:textColor="@color/textColorPrimary" />
+
+        <!-- Texte qui annonce le mode actuellement selectionne. -->
+        <TextView
+            android:id="@+id/txtThemeStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="16sp"
+            tools:text="Mode actuel: clair" />
+
+        <!-- Carte Material pour montrer les couleurs de carte dans les deux themes. -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/demoThemeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="3dp">
+
+            <!-- Contenu simple de la carte. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Texte exemple dans la carte. -->
+                <TextView
+                    android:id="@+id/txtCardExample"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Exemple de carte lisible en mode clair et sombre."
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="16sp" />
+
+                <!-- Bouton exemple pour montrer le style MaterialButton. -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnThemeExample"
+                    style="@style/Widget.SecureUIApp.MaterialButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Bouton Exemple" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Bouton retour pour fermer l'activite. -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackTheme"
+            style="@style/Widget.SecureUIApp.MaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Retour" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

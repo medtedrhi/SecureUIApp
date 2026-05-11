@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android utilise automatiquement ce fichier values-night quand le mode sombre est actif. -->
+    <!-- Couleur principale adaptee au mode sombre. -->
+    <color name="colorPrimary">#90CAF9</color>
+
+    <!-- Couleur principale plus foncee pour le mode sombre. -->
+    <color name="colorPrimaryDark">#42A5F5</color>
+
+    <!-- Couleur d'accent visible sur un fond sombre. -->
+    <color name="colorAccent">#80CBC4</color>
+
+    <!-- Couleur principale du texte en mode sombre. -->
+    <color name="textColorPrimary">#F5F7FA</color>
+
+    <!-- Couleur secondaire du texte en mode sombre. -->
+    <color name="textColorSecondary">#B0BEC5</color>
+
+    <!-- Couleur de fond sombre pour reduire la fatigue visuelle. -->
+    <color name="backgroundColor">#121212</color>
+
+    <!-- Couleur des cartes en mode sombre. -->
+    <color name="cardBackground">#1E1E1E</color>
+
+    <!-- Couleur noire gardee pour les ressources Android de base. -->
+    <color name="black">#FF000000</color>
+
+    <!-- Couleur blanche gardee pour les ressources Android de base. -->
+    <color name="white">#FFFFFFFF</color>
+</resources>
